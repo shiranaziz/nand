@@ -1,0 +1,33 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/02/Adder16.hdl
+
+/**
+ * divde by 2
+ * preserves the sign and move on bit right
+ */
+
+CHIP ShiftRight {
+    IN a[16];
+    OUT out[16];
+
+    PARTS:
+   	Mask(a = a[15],out = out[15]); // the sign save as it at the input 
+	Mask(a = false,out = out[14]);// move right
+	Mask(a = a[14],out = out[13]);
+	Mask(a = a[13],out = out[12]);
+	Mask(a = a[12],out = out[11]);
+	Mask(a = a[11],out = out[10]);
+	Mask(a = a[10],out = out[9]);
+	Mask(a = a[9],out = out[8]);
+	Mask(a = a[8],out = out[7]);
+	Mask(a = a[7],out = out[6]);
+	Mask(a = a[6],out = out[5]);
+	Mask(a = a[5],out = out[4]);
+	Mask(a = a[4],out = out[3]);
+	Mask(a = a[3],out = out[2]);
+	Mask(a = a[2],out = out[1]);
+	Mask(a = a[1],out = out[0]);
+  
+}
