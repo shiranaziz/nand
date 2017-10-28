@@ -78,5 +78,4 @@ CHIP Mul {
   	ShiftLeft(a=outshift14, out=outshift15);
 	Mux16(a=false, b=outshift15 , sel = b[15] ,out = outmul15);
 	Add16(a=outmul15, b=outadd15, out = out);	
-
 }
